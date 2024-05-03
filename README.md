@@ -3,10 +3,10 @@
 **Joshua A. Ruiz**  
 jar3654@mavs.uta.edu  
 
-*Breast Cancer Kaggle Project*
+# Breast Cancer Kaggle Project
 
-# Overview
+## Overview
 
-#Summary of Work done
+### Summary of Work done
 
 #

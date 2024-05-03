@@ -9,6 +9,26 @@ jar3654@mavs.uta.edu
 
 ## Summary of Work done
 ### Data
-### Preprocessing
+#### Preprocessing
 #### Data Visualization
+### Problem Formulation
+### Training
+### Performance Comparison
 
+## Conclusions
+
+## Future Work
+
+# How to reproduce results
+
+## Overview of files in repository
+
+## Software Setup
+
+## Data
+
+## Training
+
+### Performance Evauluation
+
+# Citations

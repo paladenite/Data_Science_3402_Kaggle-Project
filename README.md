@@ -26,9 +26,11 @@ When looking at the raw data itself we could see that the main issues come from 
 So we did several things that make it better for our model prediction:
 
   + 1.) Since race had over 8000 out of 12000 entries missing values, we excluded it out of the model due to the impact it would have, and we also excluded patents:
-    + Zipcode 
+    + Zipcode, ID, Insurance type, all the codes for breast cancer types and codes associated with them (since we already have a column dedicated for a yes/no cancer detection)
+  + 2.) For the remaining tables, since they had very little missing data values we removed the rows from the data since they were less than 2% of the data.
 
 #### Data Visualization
+Since
 
 ### Training
 

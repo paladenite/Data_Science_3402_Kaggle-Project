@@ -7,6 +7,8 @@ jar3654@mavs.uta.edu
 
 ## Overview
 
-### Summary of Work done
+## Summary of Work done
+### Data
+### Preprocessing
+### Data Visualization
 
-#

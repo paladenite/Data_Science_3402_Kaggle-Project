@@ -46,6 +46,8 @@ Since
 
 ## Data
 
+The data and the challenge itself can be found [here](https://www.kaggle.com/competitions/widsdatathon2024-challenge1/data)
+
 ### Performance Evauluation
 
 # Citations

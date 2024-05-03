@@ -5,7 +5,7 @@ jar3654@mavs.uta.edu
 
 # Breast Cancer Kaggle Project
 
-This repository is for an attempt on 
+This repository is for an attempt on the WiDs Datathon 2024 Challenge #1. 
 
 ## Overview
 

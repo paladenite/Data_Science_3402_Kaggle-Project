@@ -26,7 +26,7 @@ When looking at the raw data itself we could see that the main issues come from 
 So we did several things that make it better for our model prediction:
 
   + 1.) Since race had over 8000 out of 12000 entries missing values, we excluded it out of the model due to the impact it would have, and we also excluded patents:
-  + + Zipcode 
+    + Zipcode 
 
 #### Data Visualization
 

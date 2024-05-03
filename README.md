@@ -20,6 +20,8 @@ Our code was made with these 2 objectives in mind and my model achieved accuracy
 ## Summary of Work done
 ### Data
 
+The data set itself had 12908 entries for training the model and 5793 for testing the model.
+
 #### Preprocessing
 
 When looking at the raw data itself we could see that the main issues come from missing data values, and strings instead of numbers.
@@ -29,25 +31,14 @@ So we did several things that make it better for our model prediction:
     + Zipcode, ID, Insurance type, all the codes for breast cancer types and codes associated with them (since we already have a column dedicated for a yes/no cancer detection)
   + 2.) For the remaining tables, since they had very little missing data values we removed the rows from the data since they were less than 2% of the data.
 
-#### Data Visualization
-Since
+### Training and Performance Comparison
 
-### Training
-
-### Performance Comparison
+Out of the three different models all of them failed,they were oversaturated with data that should have been seperated 
 
 ## Conclusions
 
-# How to reproduce results
-
-## Overview of files in repository
-
-## Software Setup
+What we could have done better was chunk the data into several classifications as there was atmosphere gasses, income levels, etc. As making one model to handle it all was a bit much and end the end with an AUC score so below it shows it.
 
 ## Data
 
 The data and the challenge itself can be found [here](https://www.kaggle.com/competitions/widsdatathon2024-challenge1/data)
-
-### Performance Evauluation
-
-# Citations

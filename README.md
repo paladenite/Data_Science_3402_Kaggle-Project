@@ -31,13 +31,13 @@ So we did several things that make it better for our model prediction:
     + Zipcode, ID, Insurance type, all the codes for breast cancer types and codes associated with them (since we already have a column dedicated for a yes/no cancer detection)
   + 2.) For the remaining tables, since they had very little missing data values we removed the rows from the data since they were less than 2% of the data.
 
-### Training and Performance Comparison
+### Model Training and Performance Comparison
 
-Out of the three different models all of them failed,they were oversaturated with data that should have been seperated 
+The 4 models I trained were a Logistical Regressions, and a Random Forrest, out of the four different models all of them failed,they were oversaturated with data that should have been seperated. Because data from location, income, age, and air quality were mixed together, they couldn't get accurate results from them.
 
 ## Conclusions
 
-What we could have done better was chunk the data into several classifications as there was atmosphere gasses, income levels, etc. As making one model to handle it all was a bit much and end the end with an AUC score so below it shows it.
+What we could have done better was chunk the data into several classifications as there was atmosphere gasses, income levels, etc. As making one model to handle it all was a bit much and end the end with an AUC score so below it shows it. Classifications should help with the data by seperating revelent/related data into seperate files and help alot more
 
 ## Data
 

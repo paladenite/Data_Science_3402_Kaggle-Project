@@ -67,7 +67,7 @@ From here I did a Cross Validation against Random Forest, Gradient Boosting, and
 
 The models would have performed much better if we had BMI involved since BMI is one of the strongest factors to an onset of cancer. Race may have also helped due to different ethnic diets and genetic dispositions, but since both were dropped the accuracy that we get Is quite good. 
 
-However when doing the submission for the kaggle project the models only got a score of  0.742 which may tell us that our models were cusping on the edge of overfitting.
+However when doing the submission for the kaggle project the models only got a score of  0.742 which may tell us that our models were cusping on the edge of overfitting. However It doesnt help that we had around 500 out of around 5500 missing predictions due to the entries being cut due to missing varibles. Which had to be replace in order to submit the data to be graded. Otherwise I think our accuracy would be higher but most likely wouldnt reach 79%.
 
 ![download](https://github.com/paladenite/Data_Science_3402_Kaggle-Project/assets/112378770/735b3078-0cfa-44ab-be6c-78e563f25e96)
 

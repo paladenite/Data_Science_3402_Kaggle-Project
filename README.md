@@ -67,13 +67,13 @@ From here I did a Cross Validation against Random Forest, Gradient Boosting, and
 
 The models would have performed much better if we had BMI involved since BMI is one of the strongest factors to an onset of cancer. Race may have also helped due to different ethnic diets and genetic dispositions, but since both were dropped the accuracy that we get Is quite good. 
 
-However when doing the submission for the kaggle project the models only got a score of  
+However when doing the submission for the kaggle project the models only got a score of  0.742 which may tell us that our models were cusping on the edge of overfitting.
 
 ![download](https://github.com/paladenite/Data_Science_3402_Kaggle-Project/assets/112378770/735b3078-0cfa-44ab-be6c-78e563f25e96)
 
 ## Conclusions
 
-What we could have done better was chunk the data into several classifications as there was atmosphere gasses, income levels, etc. As making one model to handle it all was a bit much and end the end with an AUC score so below it shows it. Classifications should help with the data by seperating revelent/related data into seperate files and help alot more
+Despite the huge amount of data we gotten, less than 3/4ths of it was not applicable to the problem, and a significant portion of that remaining data had to be chunked due to vasts amounts of missing entries. Despite this, using the remaining data it is apparant that, while much more optimization with the models and experimenting with different stacks can lead to a higher score of accuracy, it seems that it plataues near 80% and not much more can be achieved without more data.
 
 ## Data
 

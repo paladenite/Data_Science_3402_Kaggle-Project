@@ -24,23 +24,52 @@ With these objectives in mind, the best model I managed to create obtain a 74.2%
 
 The data set itself had 12908 entries for training the model and testing the model. 72% of the entries will be used for training, and the remaining 28% for testing.
 
-Before preprocessing the data, when looking at the raw csv format, automatically at a first glance you can see that the vast majority of the data has nothing to do with cancer. However, we can still make use from BMI, Age, and NO2 as natural indicators of cancer as the higher the BMI, higher the Age, and the more NO2 gasses there are, the chance of cancer in general increases significantly. Outside of the natural indicators, we can also use the diagnosis codes for both breast and metastatic cancer as a good indicator from the doctors first prognosis.
+Before preprocessing the data, when looking at the raw csv format, automatically at a first glance you can see that the vast majority of the data has nothing to do with cancer. However, we can still make use from BMI, Age, and NO2 as natural indicators of cancer as the higher the BMI, higher the Age, and the more NO2 gasses there are, the chance of cancer in general increases significantly. Outside of the natural indicators, we can also use the diagnosis codes for both breast and metastatic cancer as a good indicator from the doctors first prognosis. We can also use Race to see if a particular group is more susceptible to cancer, and payer_type as a good indicator for an individuals wealth status to see if financial causes lead up to cancer as well.
 
 #### Preprocessing
 
+Due to the high amounts of missing data for Race and BMI we cannot supplement data into those columns as it will heavily affect the result, so unfortunately they will be droped and since the remaining null values are small in number, less than 1% of the data, we can drop those entries as well. 
+
 ![image](https://github.com/paladenite/Data_Science_3402_Kaggle-Project/assets/112378770/41673e61-9ae0-4e0a-a478-71bc6572f63b)
 
-
-  + 1.) Since race had over 8000 out of 12000 entries missing values, we excluded it out of the model due to the impact it would have, and we also excluded patents:
-    + Zipcode, ID, Insurance type, all the codes for breast cancer types and codes associated with them (since we already have a column dedicated for a yes/no cancer detection)
-  + 2.) For the remaining tables, since they had very little missing data values we removed the rows from the data since they were less than 2% of the data.
-
+For the remaining columns, we must make sure that they are all floats and so payer_type, breast and metastatic cancer codes will all be hard encoded to help with data processing and identification of causes. 
 
 ### Data Visualization
 
+When using statistical data distributions overlayed with the data distributions we can see a clear overlap in our data which means that we do not have to worry about outside unknown factors messing with our data set and dont have to compensate for much.
+
+![download](https://github.com/paladenite/Data_Science_3402_Kaggle-Project/assets/112378770/04a2f61e-ef76-49b2-b030-257d79d43a84)
+
+
 ### Model Training and Performance Comparison
 
-The 4 models I trained were a Logistical Regressions, and a Random Forrest, out of the four different models all of them failed,they were oversaturated with data that should have been seperated. Because data from location, income, age, and air quality were mixed together, they couldn't get accurate results from them.
+All the models trained were primarily ensemble methods and stackings of those methods. As said before 72% of our data set was set for training the model and 28% was for testing. The exact percentage was determined from playing around with the test_size hyperparameter with all the models, and all of them performed higher at that mark.
+
+The first one was a model that primarily used the Random Forest method.
+
+![download](https://github.com/paladenite/Data_Science_3402_Kaggle-Project/assets/112378770/b13ce6a3-69f3-4301-b9e3-388390d2ac1b)
+
+From here I stacked it with an XGBoost to help with any extreme gradients that may be affecting it.
+
+![download](https://github.com/paladenite/Data_Science_3402_Kaggle-Project/assets/112378770/458353c2-411f-4482-b630-96cfdfbbcd43)
+
+Since the score didnt improve much I decided for a much milder approach and used only Gradient Boosting.
+
+![download](https://github.com/paladenite/Data_Science_3402_Kaggle-Project/assets/112378770/d653e81f-cf3e-4447-9e15-87a910b7043c)
+
+However the scoore didnt improve by much either. So I went back and did AdaBoosting with XGBoosting.
+
+![download](https://github.com/paladenite/Data_Science_3402_Kaggle-Project/assets/112378770/8ce60f09-934a-4dee-bdb8-c34e0df2b23b)
+
+From here I did a Cross Validation against Random Forest, Gradient Boosting, and XGBoosting. I left AdaBoosting out since it did nearly the same as Forest with XGBoost.
+
+![download](https://github.com/paladenite/Data_Science_3402_Kaggle-Project/assets/112378770/86fbb798-eb52-4eca-b1d4-6131054fa94f)
+
+The models would have performed much better if we had BMI involved since BMI is one of the strongest factors to an onset of cancer. Race may have also helped due to different ethnic diets and genetic dispositions, but since both were dropped the accuracy that we get Is quite good. 
+
+However when doing the submission for the kaggle project the models only got a score of  
+
+![download](https://github.com/paladenite/Data_Science_3402_Kaggle-Project/assets/112378770/735b3078-0cfa-44ab-be6c-78e563f25e96)
 
 ## Conclusions
 
